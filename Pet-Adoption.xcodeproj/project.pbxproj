@@ -7,23 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EACEDC9E827696D577163B4 /* Pods_Pet_Adoption.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8BBE094F82C2BCCC179EC4 /* Pods_Pet_Adoption.framework */; };
+		97001D812C22E49D00C2DCE2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97001D802C22E49D00C2DCE2 /* LoginViewController.swift */; };
+		97001D832C231B6E00C2DCE2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97001D822C231B6E00C2DCE2 /* RegisterViewController.swift */; };
+		97001D852C23205E00C2DCE2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97001D842C23205E00C2DCE2 /* Constants.swift */; };
+		972A60F52C248300005B5589 /* PetProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972A60F42C248300005B5589 /* PetProfileViewController.swift */; };
+		976B07292C24213F006BC5DE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976B07282C24213F006BC5DE /* Extensions.swift */; };
+		976B072B2C242463006BC5DE /* AdoptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976B072A2C242463006BC5DE /* AdoptionsViewController.swift */; };
+		976B072E2C2424AD006BC5DE /* AnimalAdoption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976B072D2C2424AD006BC5DE /* AnimalAdoption.swift */; };
+		976B07302C242618006BC5DE /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976B072F2C242618006BC5DE /* Enums.swift */; };
+		976B07322C24263B006BC5DE /* AnimalAge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976B07312C24263B006BC5DE /* AnimalAge.swift */; };
+		976B07352C2426CE006BC5DE /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976B07342C2426CE006BC5DE /* DataService.swift */; };
+		976B073A2C2437D9006BC5DE /* AdoptionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976B07382C2437D9006BC5DE /* AdoptionsCollectionViewCell.swift */; };
+		976B073B2C2437D9006BC5DE /* AdoptionsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 976B07392C2437D9006BC5DE /* AdoptionsCollectionViewCell.xib */; };
 		97FB1B2E2C21D86F0005BCC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FB1B2D2C21D86F0005BCC6 /* AppDelegate.swift */; };
 		97FB1B302C21D86F0005BCC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FB1B2F2C21D86F0005BCC6 /* SceneDelegate.swift */; };
-		97FB1B322C21D86F0005BCC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FB1B312C21D86F0005BCC6 /* ViewController.swift */; };
+		97FB1B322C21D86F0005BCC6 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FB1B312C21D86F0005BCC6 /* SplashViewController.swift */; };
 		97FB1B352C21D86F0005BCC6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 97FB1B342C21D86F0005BCC6 /* Base */; };
 		97FB1B372C21D8700005BCC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97FB1B362C21D8700005BCC6 /* Assets.xcassets */; };
 		97FB1B3A2C21D8700005BCC6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 97FB1B392C21D8700005BCC6 /* Base */; };
+		97FB1B422C21D93F0005BCC6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97FB1B412C21D93F0005BCC6 /* GoogleService-Info.plist */; };
+		97FB1B492C21DFE40005BCC6 /* loading_cat.json in Resources */ = {isa = PBXBuildFile; fileRef = 97FB1B482C21DFE40005BCC6 /* loading_cat.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A8BBE094F82C2BCCC179EC4 /* Pods_Pet_Adoption.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pet_Adoption.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97001D802C22E49D00C2DCE2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		97001D822C231B6E00C2DCE2 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		97001D842C23205E00C2DCE2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		972A60F42C248300005B5589 /* PetProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProfileViewController.swift; sourceTree = "<group>"; };
+		976B07282C24213F006BC5DE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		976B072A2C242463006BC5DE /* AdoptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptionsViewController.swift; sourceTree = "<group>"; };
+		976B072D2C2424AD006BC5DE /* AnimalAdoption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalAdoption.swift; sourceTree = "<group>"; };
+		976B072F2C242618006BC5DE /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		976B07312C24263B006BC5DE /* AnimalAge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalAge.swift; sourceTree = "<group>"; };
+		976B07342C2426CE006BC5DE /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		976B07382C2437D9006BC5DE /* AdoptionsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptionsCollectionViewCell.swift; sourceTree = "<group>"; };
+		976B07392C2437D9006BC5DE /* AdoptionsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdoptionsCollectionViewCell.xib; sourceTree = "<group>"; };
 		97FB1B2A2C21D86F0005BCC6 /* Pet-Adoption.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pet-Adoption.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97FB1B2D2C21D86F0005BCC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97FB1B2F2C21D86F0005BCC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		97FB1B312C21D86F0005BCC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		97FB1B312C21D86F0005BCC6 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		97FB1B342C21D86F0005BCC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		97FB1B362C21D8700005BCC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97FB1B392C21D8700005BCC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97FB1B3B2C21D8700005BCC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97FB1B412C21D93F0005BCC6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		97FB1B482C21DFE40005BCC6 /* loading_cat.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading_cat.json; sourceTree = "<group>"; };
+		9C278E74D412C80F272C7961 /* Pods-Pet-Adoption.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pet-Adoption.debug.xcconfig"; path = "Target Support Files/Pods-Pet-Adoption/Pods-Pet-Adoption.debug.xcconfig"; sourceTree = "<group>"; };
+		AB9459640A55EDFED4488F41 /* Pods-Pet-Adoption.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pet-Adoption.release.xcconfig"; path = "Target Support Files/Pods-Pet-Adoption/Pods-Pet-Adoption.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +63,64 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EACEDC9E827696D577163B4 /* Pods_Pet_Adoption.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2196984F1E124FF7C01976C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A8BBE094F82C2BCCC179EC4 /* Pods_Pet_Adoption.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4800D0ED7AEA122BEECB26FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C278E74D412C80F272C7961 /* Pods-Pet-Adoption.debug.xcconfig */,
+				AB9459640A55EDFED4488F41 /* Pods-Pet-Adoption.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		976B07242C241FEB006BC5DE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				97001D842C23205E00C2DCE2 /* Constants.swift */,
+				976B07282C24213F006BC5DE /* Extensions.swift */,
+				976B072F2C242618006BC5DE /* Enums.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		976B072C2C24248F006BC5DE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				976B072D2C2424AD006BC5DE /* AnimalAdoption.swift */,
+				976B07312C24263B006BC5DE /* AnimalAge.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		976B07332C2426C3006BC5DE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				976B07342C2426CE006BC5DE /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		97FB1B212C21D86F0005BCC6 = {
 			isa = PBXGroup;
 			children = (
 				97FB1B2C2C21D86F0005BCC6 /* Pet-Adoption */,
 				97FB1B2B2C21D86F0005BCC6 /* Products */,
+				4800D0ED7AEA122BEECB26FB /* Pods */,
+				2196984F1E124FF7C01976C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +135,50 @@
 		97FB1B2C2C21D86F0005BCC6 /* Pet-Adoption */ = {
 			isa = PBXGroup;
 			children = (
+				976B07332C2426C3006BC5DE /* Services */,
+				976B072C2C24248F006BC5DE /* Models */,
+				97FB1B432C21D9EA0005BCC6 /* Assets */,
 				97FB1B2D2C21D86F0005BCC6 /* AppDelegate.swift */,
 				97FB1B2F2C21D86F0005BCC6 /* SceneDelegate.swift */,
-				97FB1B312C21D86F0005BCC6 /* ViewController.swift */,
-				97FB1B332C21D86F0005BCC6 /* Main.storyboard */,
+				97FB1B4B2C22E3C90005BCC6 /* Controllers */,
+				97FB1B4A2C22E3BD0005BCC6 /* Views */,
 				97FB1B362C21D8700005BCC6 /* Assets.xcassets */,
 				97FB1B382C21D8700005BCC6 /* LaunchScreen.storyboard */,
 				97FB1B3B2C21D8700005BCC6 /* Info.plist */,
+				97FB1B412C21D93F0005BCC6 /* GoogleService-Info.plist */,
+				976B07242C241FEB006BC5DE /* Utils */,
 			);
 			path = "Pet-Adoption";
+			sourceTree = "<group>";
+		};
+		97FB1B432C21D9EA0005BCC6 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				97FB1B482C21DFE40005BCC6 /* loading_cat.json */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		97FB1B4A2C22E3BD0005BCC6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				97FB1B332C21D86F0005BCC6 /* Main.storyboard */,
+				976B07382C2437D9006BC5DE /* AdoptionsCollectionViewCell.swift */,
+				976B07392C2437D9006BC5DE /* AdoptionsCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		97FB1B4B2C22E3C90005BCC6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				97FB1B312C21D86F0005BCC6 /* SplashViewController.swift */,
+				97001D802C22E49D00C2DCE2 /* LoginViewController.swift */,
+				97001D822C231B6E00C2DCE2 /* RegisterViewController.swift */,
+				976B072A2C242463006BC5DE /* AdoptionsViewController.swift */,
+				972A60F42C248300005B5589 /* PetProfileViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +188,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97FB1B3E2C21D8700005BCC6 /* Build configuration list for PBXNativeTarget "Pet-Adoption" */;
 			buildPhases = (
+				45C1D11E02C73CB0336FF566 /* [CP] Check Pods Manifest.lock */,
 				97FB1B262C21D86F0005BCC6 /* Sources */,
 				97FB1B272C21D86F0005BCC6 /* Frameworks */,
 				97FB1B282C21D86F0005BCC6 /* Resources */,
+				0FD86C648B9B1878F79D20F4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,7 +241,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97FB1B492C21DFE40005BCC6 /* loading_cat.json in Resources */,
 				97FB1B372C21D8700005BCC6 /* Assets.xcassets in Resources */,
+				976B073B2C2437D9006BC5DE /* AdoptionsCollectionViewCell.xib in Resources */,
+				97FB1B422C21D93F0005BCC6 /* GoogleService-Info.plist in Resources */,
 				97FB1B3A2C21D8700005BCC6 /* Base in Resources */,
 				97FB1B352C21D86F0005BCC6 /* Base in Resources */,
 			);
@@ -133,14 +252,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0FD86C648B9B1878F79D20F4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pet-Adoption/Pods-Pet-Adoption-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pet-Adoption/Pods-Pet-Adoption-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pet-Adoption/Pods-Pet-Adoption-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45C1D11E02C73CB0336FF566 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pet-Adoption-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		97FB1B262C21D86F0005BCC6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97FB1B322C21D86F0005BCC6 /* ViewController.swift in Sources */,
+				976B073A2C2437D9006BC5DE /* AdoptionsCollectionViewCell.swift in Sources */,
+				976B072B2C242463006BC5DE /* AdoptionsViewController.swift in Sources */,
+				97001D812C22E49D00C2DCE2 /* LoginViewController.swift in Sources */,
+				976B07322C24263B006BC5DE /* AnimalAge.swift in Sources */,
+				976B07352C2426CE006BC5DE /* DataService.swift in Sources */,
+				976B07302C242618006BC5DE /* Enums.swift in Sources */,
+				97001D832C231B6E00C2DCE2 /* RegisterViewController.swift in Sources */,
+				97FB1B322C21D86F0005BCC6 /* SplashViewController.swift in Sources */,
+				972A60F52C248300005B5589 /* PetProfileViewController.swift in Sources */,
 				97FB1B2E2C21D86F0005BCC6 /* AppDelegate.swift in Sources */,
 				97FB1B302C21D86F0005BCC6 /* SceneDelegate.swift in Sources */,
+				97001D852C23205E00C2DCE2 /* Constants.swift in Sources */,
+				976B072E2C2424AD006BC5DE /* AnimalAdoption.swift in Sources */,
+				976B07292C24213F006BC5DE /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,19 +459,20 @@
 		};
 		97FB1B3F2C21D8700005BCC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C278E74D412C80F272C7961 /* Pods-Pet-Adoption.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RUSV7ZNNLV;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Pet-Adoption/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,19 +488,20 @@
 		};
 		97FB1B402C21D8700005BCC6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB9459640A55EDFED4488F41 /* Pods-Pet-Adoption.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RUSV7ZNNLV;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Pet-Adoption/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
