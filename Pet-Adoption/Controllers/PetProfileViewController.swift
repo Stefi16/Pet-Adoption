@@ -33,23 +33,18 @@ class PetProfileViewController: UIViewController {
         
     
         inputAdoptionData()
-        addBRoundedCorners(to: infoView, corners
+        addRoundedCorners(to: infoView, corners
                            : [.topLeft, .topRight])
-        addBRoundedCorners(to: genderImage, corners
+        addRoundedCorners(to: genderImage, corners
                            : [.topLeft, .topRight, .bottomLeft, .bottomRight])
-        addBRoundedCorners(to: petTypeBackground, corners
+        addRoundedCorners(to: petTypeBackground, corners
                            : [.topLeft, .topRight, .bottomLeft, .bottomRight])
-        addBRoundedCorners(to: agePetBackground, corners
+        addRoundedCorners(to: agePetBackground, corners
                            : [.topLeft, .topRight, .topLeft, .topRight, .bottomLeft, .bottomRight])
         
         
         self.navigationController?.navigationBar.tintColor = .systemIndigo;
         
-    }
-    
-    private func addBRoundedCorners(to view: UIView, corners: UIRectCorner) {
-        view.layer.cornerRadius = 20.0
-        view.layer.maskedCorners = CACornerMask(rawValue: corners.rawValue)
     }
     
     private func inputAdoptionData() {

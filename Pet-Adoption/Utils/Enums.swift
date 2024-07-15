@@ -21,7 +21,7 @@ enum AnimalGender: String, Codable {
     }
 }
 
-enum AnimalType: String, Codable {
+enum AnimalType: String, Codable, CaseIterable {
     case cat
     case dog
     case bird

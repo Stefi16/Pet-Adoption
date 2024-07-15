@@ -7,6 +7,7 @@ target 'Pet-Adoption' do
 
 pod 'FirebaseAuth'
 pod 'FirebaseFirestore'
+pod 'FirebaseStorage'
 pod 'lottie-ios'
 pod 'IQKeyboardManager'
 pod 'SDWebImage'

@@ -1,17 +1,15 @@
 import Foundation
 import FirebaseFirestore
 
-class DataService {
+struct DataService {
     let database = Firestore.firestore()
     
     private init() {}
     
     static let dataService = DataService()
-    
-    var adoptions = [AnimalAdoption]()
-    
+        
     func getAdoptions(completion: @escaping ([AnimalAdoption]?) -> Void) {
-        database.collection(Constants.adoptionsCollectionName).getDocuments { [weak self] data, error in
+        database.collection(Constants.adoptionsCollectionName).getDocuments {data, error in
             if let err = error {
                 print(err.localizedDescription)
                 return
@@ -34,8 +32,29 @@ class DataService {
                 }
             }
             
-            self?.adoptions = fetchedAdoptions
             completion(fetchedAdoptions)
+        }
+    }
+    
+    func saveAdoption(_ adoption: AnimalAdoption, completion: @escaping (Bool) -> Void) {
+        let db = Firestore.firestore()
+        let collection = db.collection(Constants.adoptionsCollectionName)
+        
+        do {
+            let adoptionData = try JSONEncoder().encodeToDictionary(adoption)
+            var documentReference: DocumentReference? = nil
+            documentReference = collection.addDocument(data: adoptionData) { error in
+                if let err = error {
+                    print("Error adding document: \(err)")
+                    completion(false)
+                } else {
+                    print("Document added with ID: \(documentReference?.documentID ?? "No ID")")
+                    completion(true)
+                }
+            }
+        } catch {
+            print("Failed to encode adoption: \(error)")
+            completion(false)
         }
     }
 }
