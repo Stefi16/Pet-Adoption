@@ -57,6 +57,8 @@ class AddAdoptionViewController: ImagePickerViewController  {
     }
     
     @IBAction func chooseAnimalType(_ sender: UIButton) {
+        clearSelectedType()
+        
         let alert = UIAlertController(title: "Select Animal Type", message: nil, preferredStyle: .actionSheet)
         
         for type in AnimalType.allCases {
@@ -74,9 +76,7 @@ class AddAdoptionViewController: ImagePickerViewController  {
     }
     
     @IBAction func chooseAnimalAge(_ sender: UIButton) {
-        selectedYear = nil
-        selectedMonths = nil
-        chooseAgeButton.setTitle("Choose: Age", for: .normal)
+        clearSelectedAge()
         
         let alertController = UIAlertController(title: "Select Month and Year", message: "\n\n\n\n\n\n\n\n\n", preferredStyle: .actionSheet)
         
@@ -90,7 +90,7 @@ class AddAdoptionViewController: ImagePickerViewController  {
         
         let selectAction = UIAlertAction(title: "Select", style: .default) { _ in
             self.selectedMonths = self.selectedMonths ?? "1m."
-            self.selectedYear = self.selectedYear ?? "1y."
+            self.selectedYear = self.selectedYear ?? "0y."
             
             self.chooseAgeButton.setTitle("Choose: \(self.selectedYear!) \(self.selectedMonths!)", for: .normal)
         }
@@ -108,7 +108,7 @@ class AddAdoptionViewController: ImagePickerViewController  {
     }
     
     private func isAgeValid() -> Bool {
-        if let monthsInt = selectedMonths?.first?.wholeNumberValue, let yearsInt = selectedYear?.first?.wholeNumberValue {
+        if let _ = selectedMonths?.first?.wholeNumberValue, let _ = selectedYear?.first?.wholeNumberValue {
             return true
         }
         
@@ -141,17 +141,41 @@ class AddAdoptionViewController: ImagePickerViewController  {
                 
                 DataService.dataService.saveAdoption(newAdoption) { sucesss in
                     if sucesss {
-                        
+                        self?.clearScreenData()
                     }
                     
                     self?.isButtonClicked = false
                 }
             }
-            
             return
         }
         
         showAlert(message: "Please enter description field with at least ten characters, all mandatory fields with at least two characters, age and type.", title: "All fields are not valid!")
+    }
+    
+    private func clearScreenData() {
+        nameField.text = ""
+        adoptionImage.image = UIImage(named: "placeholder")
+        genderTypeButton.selectedSegmentIndex = 0
+        
+        clearSelectedType()
+        clearSelectedAge()
+        
+        breedField.text = ""
+        countryField.text = ""
+        cityField.text = ""
+        descriptionField.text = ""
+    }
+    
+    private func clearSelectedAge() {
+        selectedYear = nil
+        selectedMonths = nil
+        chooseAgeButton.setTitle("Choose: Age", for: .normal)
+    }
+    
+    private func clearSelectedType() {
+        chosenAnimalType = nil
+        chooseTypeButton.setTitle("Choose: Type", for: .normal)
     }
 }
 
@@ -168,7 +192,7 @@ extension AddAdoptionViewController: UIPickerViewDelegate, UIPickerViewDataSourc
         return (1...12).map { "\($0)m." }
     }
     var years: [String] {
-        return (1...25).map { "\($0)y." }
+        return (0...25).map { "\($0)y." }
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

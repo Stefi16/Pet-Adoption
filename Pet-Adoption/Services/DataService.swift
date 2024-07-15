@@ -56,5 +56,27 @@ struct DataService {
             print("Failed to encode adoption: \(error)")
             completion(false)
         }
+    } 
+    
+    func saveUser(_ user: AppUser, completion: @escaping (Bool) -> Void) {
+        let db = Firestore.firestore()
+        let collection = db.collection(Constants.adoptionsCollectionName)
+        
+        do {
+            let adoptionData = try JSONEncoder().encodeToDictionary(user)
+            var documentReference: DocumentReference? = nil
+            documentReference = collection.addDocument(data: adoptionData) { error in
+                if let err = error {
+                    print("Error adding document: \(err)")
+                    completion(false)
+                } else {
+                    print("Document added with ID: \(documentReference?.documentID ?? "No ID")")
+                    completion(true)
+                }
+            }
+        } catch {
+            print("Failed to encode adoption: \(error)")
+            completion(false)
+        }
     }
 }

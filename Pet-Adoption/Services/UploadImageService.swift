@@ -26,7 +26,10 @@ struct UploadImageService {
         }
         
         let adoptionRef = storageRef.child("adoption_picture/\(adoptionId).jpg")
-        let task = adoptionRef.putData(safeImage)
+        let metadata = StorageMetadata()
+        metadata.contentType = "image/jpeg"
+        
+        let task = adoptionRef.putData(safeImage, metadata: metadata)
         
         var safeUrl: String?
         task.observe(.success) { snapshot in

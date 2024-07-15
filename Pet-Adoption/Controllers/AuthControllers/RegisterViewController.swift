@@ -31,12 +31,11 @@ class RegisterViewController: UIViewController {
     
     @IBAction func onRegisterPressed(_ sender: UIButton) {
         loginPressed()
-        
     }
     
     private func loginPressed() {
         guard let email = emailField.text, let pass = passwordField.text, let confirmPass = confirmPasswordField.text  else {
-            return showAlert(message: "Please enter valid dataa in  all fields")
+            return showAlert(message: "Please enter valid data in  all fields")
         }
         
         if pass != confirmPass {
@@ -48,11 +47,18 @@ class RegisterViewController: UIViewController {
                 return self.showAlert(message: err.localizedDescription)
             }
             
-            self.performSegue(withIdentifier: Constants.registerToMainSegue, sender: self)
-            
-            self.emailField.text = ""
-            self.passwordField.text = ""
-            self.confirmPasswordField.text = ""
+            let user = AppUser.createNew(id: data!.user.uid, email: email)
+            DataService.dataService.saveUser(user) { [weak self] sucess in
+                if sucess {
+                    self?.performSegue(withIdentifier: Constants.registerToMainSegue, sender: self)
+                    
+                    self?.emailField.text = ""
+                    self?.passwordField.text = ""
+                    self?.confirmPasswordField.text = ""
+                } else {
+                    self?.showAlert(message: "Something went wrong with saving the new user.", title: "Please try again.")
+                }
+            }
         }
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AppUser: Codable {
+struct AppUser: Codable {
     var id: String
     var email: String
     var username: String?
@@ -17,4 +17,15 @@ class AppUser: Codable {
     var phone: String?
     var isAdmin: Bool
     var isDarkMode: Bool
+    
+    static func createNew(id: String, email: String) -> AppUser {
+        return AppUser(
+            id: id,
+            email: email,
+            favouritePosts: [],
+            dateJoined: Date(),
+            isAdmin: false,
+            isDarkMode: false
+        )
+    }
 }
