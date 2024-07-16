@@ -25,18 +25,24 @@ struct UploadImageService {
             return
         }
         
+        let storageRef = Storage.storage().reference()
         let adoptionRef = storageRef.child("adoption_picture/\(adoptionId).jpg")
         let metadata = StorageMetadata()
         metadata.contentType = "image/jpeg"
         
-        let task = adoptionRef.putData(safeImage, metadata: metadata)
-        
-        var safeUrl: String?
-        task.observe(.success) { snapshot in
-            adoptionRef.downloadURL { url, err in
-                safeUrl = url?.absoluteString
+        let task = adoptionRef.putData(safeImage, metadata: metadata) { metadata, error in
+            guard error == nil else {
+                completion(nil)
+                return
             }
-            completion(safeUrl)
+            
+            adoptionRef.downloadURL { url, error in
+                guard let downloadURL = url, error == nil else {
+                    completion(nil)
+                    return
+                }
+                completion(downloadURL.absoluteString)
+            }
         }
         
         task.observe(.failure) { _ in

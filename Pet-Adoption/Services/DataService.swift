@@ -7,7 +7,7 @@ struct DataService {
     private init() {}
     
     static let dataService = DataService()
-        
+    
     func getAdoptions(completion: @escaping ([AnimalAdoption]?) -> Void) {
         database.collection(Constants.adoptionsCollectionName).getDocuments {data, error in
             if let err = error {
@@ -56,7 +56,27 @@ struct DataService {
             print("Failed to encode adoption: \(error)")
             completion(false)
         }
-    } 
+    }
+    
+    func loadUser(byID userID: String, completion: @escaping (AppUser?) -> Void) {
+        let userRef = database.collection("users").document(userID)
+        
+        userRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let data = document.data() ?? [:]
+                do {
+                    let user = try JSONDecoder().decode(AppUser.self, from: data)
+                    completion(user)
+                } catch {
+                    print("Failed to decode user: \(error)")
+                    completion(nil)
+                }
+            } else {
+                print("User does not exist or an error occurred: \(error?.localizedDescription ?? "Unknown error")")
+                completion(nil)
+            }
+        }
+    }
     
     func saveUser(_ user: AppUser, completion: @escaping (Bool) -> Void) {
         let db = Firestore.firestore()
