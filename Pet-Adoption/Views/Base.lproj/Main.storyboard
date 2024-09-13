@@ -580,10 +580,10 @@
             </objects>
             <point key="canvasLocation" x="4504.347826086957" y="-10.714285714285714"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="Ut8-Kr-gNg">
             <objects>
-                <tabBarController id="us3-Cc-5Mv" sceneMemberID="viewController">
+                <tabBarController id="us3-Cc-5Mv" customClass="TabBarViewController" customModule="Pet_Adoption" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Y6z-FI-i2m"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MGh-a7-bAY">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
@@ -696,6 +696,9 @@
             <point key="canvasLocation" x="1162" y="-503"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="ToF-iF-lDQ"/>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="GDr-sR-eo0"/>
     </inferredMetricsTieBreakers>

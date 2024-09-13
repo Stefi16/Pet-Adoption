@@ -2,7 +2,7 @@ import Foundation
 import FirebaseFirestore
 
 struct DataService {
-    let database = Firestore.firestore()
+    private let database = Firestore.firestore()
     
     private init() {}
     

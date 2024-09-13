@@ -12,7 +12,7 @@ struct AppUser: Codable {
     var email: String
     var username: String?
     var favouritePosts: [String]
-    var dateJoined: Date
+    var dateJoined: String
     var picture: String?
     var phone: String?
     var isAdmin: Bool
@@ -23,7 +23,7 @@ struct AppUser: Codable {
             id: id,
             email: email,
             favouritePosts: [],
-            dateJoined: Date(),
+            dateJoined: Date().formattedString,
             isAdmin: false,
             isDarkMode: false
         )

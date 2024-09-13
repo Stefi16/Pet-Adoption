@@ -1,5 +1,6 @@
 import UIKit
 import SDWebImage
+import FirebaseAuth
 
 class AdoptionsViewController: UIViewController {
     
@@ -9,6 +10,7 @@ class AdoptionsViewController: UIViewController {
     
     private var selectedAnimal: AnimalAdoption?
     var adoptions = [AnimalAdoption]()
+    var currentUser: AppUser?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +25,26 @@ class AdoptionsViewController: UIViewController {
         super.viewWillAppear(animated)
         
         fetchAdoptions()
+        fetchCurrentUser()
     }
     
     private func fetchAdoptions() {
         dataService.getAdoptions { [weak self] adoptions in
             DispatchQueue.main.async {
                 self?.adoptions = adoptions ?? []
+                self?.adoptionsView.reloadData()
+            }
+        }
+    }
+    
+    private func fetchCurrentUser() {
+        guard let userId = Auth.auth().currentUser?.uid else {
+            return
+        }
+        
+        dataService.loadUser(byID: userId) { [weak self] result in
+            DispatchQueue.main.async {
+                self?.currentUser = result
                 self?.adoptionsView.reloadData()
             }
         }
@@ -55,6 +71,12 @@ extension AdoptionsViewController: UICollectionViewDelegate, UICollectionViewDat
         
         cell.animalName?.text = adoption.animalName
         cell.ageLabel.text = adoption.animalAge.getFormattedAge
+        
+        if let isFavourite = currentUser?.favouritePosts.first(where: {$0 == adoption.adoptionId}) {
+            cell.heartImage.image = UIImage(systemName: "heart.fill")
+        } else {
+            cell.heartImage.image = UIImage(systemName: "heart")
+        }
         
         if let url = URL(string: adoption.photoUrl ?? "") {
             cell.animalImage.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder"))
